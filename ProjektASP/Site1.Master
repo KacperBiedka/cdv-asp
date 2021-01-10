@@ -13,17 +13,26 @@
 <body>
     <form id="form1" runat="server">
         <div class="main">
+            <nav class="navigation">
+                <ul>
+                    <li><a href="Site1.aspx" accesskey="1" title="">Kosmos</a></li>
+                    <li><a href="Ziemia.aspx" accesskey="2" title="">Ziemia</a></li>
+                    <li><a href="Mars.aspx" accesskey="3" title="">Mars</a></li>
+                    <li><a href="Neptun.aspx" accesskey="4" title="">Neptun</a></li>
+                    <li><a href="Login.aspx" accesskey="5" title="">Zaloguj</a></li>
+                </ul>
+            </nav>
             <div class="header">
-                 <p class="hl">Strona informacyjna o kosmosie</p>
+                 <h1 class="title">Kosmos - Strona informacyjna</h1>
             </div>
             <div class="content">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    Kosmos
+                    <h1>Czym jest kosmos?</h1>
+                    <p>Jest wszechświatem, czyli wszystkim co fizycznie istnieje, czas, materia, energia i prawa fizyczne. Kosmos jest tak naprawdę synonimem słowa wszechświat. Wiek wszechświata wynosi 13,82 miliardów lat (dla porównania Ziemia ma ok. 4,54 miliarda lat, a życie na niej powstało miliard lat po uformowaniu się). </p>
                 </asp:ContentPlaceHolder>
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
-            </div>
-            <div class="footer">
-                Copyright Kacper Biedka 2021
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/nerbula.jpg" />
+                </asp:ContentPlaceHolder>
             </div>
         </div>
     </form>

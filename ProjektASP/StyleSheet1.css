@@ -1,20 +1,69 @@
 ﻿body {
-    background: #1D1D1D;
-    color: #fff;
+    background: #fff;
     font-family: Helvetica, Arial, sans-serif;
+    padding: 0 20%;
 }
 
-.hl {
-    font-size: 200%;
+.navigation ul {
+    list-style: none;
+    display: block;
+    margin: auto;
     text-align: center;
+}
+
+.navigation li {
+    color: #fff;
+    display: inline-block;
+    background: #000;
+    padding: 10px;
+    width: 15%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header {
+    width: 97.5%;
+    margin: auto;
+}
+
+.title {
+    font-size: 200%;
+    width: 88%;
+    padding: 5%;
+    color: #fff;
+    margin: 2% auto;
+    text-align: center;
+    background: #333;
     display: block;
     font-weight: lighter;
 }
 
-.header {
+.content {
+    padding: 2%;
+}
+
+.content h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.content h1 {
+    background: #1D1D1D;
+    color: #fff;
+    width: auto;
+    text-align: center;
+    padding: 1% 0;
+}
+
+.content p {
+    font-size: 120%;
+}
+
+.content img {
     width: 100%;
-    padding-top: 60px;
-    height: 100px;
-    background: url('nerbula.jpg') center;
-    background-size: cover;
 }

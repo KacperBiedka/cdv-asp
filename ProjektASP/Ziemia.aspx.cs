@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ProjektASP
 {
-    public partial class NestedMasterPage1 : System.Web.UI.MasterPage
+    public partial class Formularz_sieci_Web11 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -10,6 +10,6 @@
 namespace ProjektASP {
     
     
-    public partial class NestedMasterPage1 {
+    public partial class Formularz_sieci_Web11 {
     }
 }

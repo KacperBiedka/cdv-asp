@@ -1,0 +1,12 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Mars.master.cs" Inherits="ProjektASP.Mars" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h1>Mars</h1>
+    <p>Mars znany jest ludziom od niepamiętnych czasów. Jego współczesna nazwa wywodzi się ze starożytności, bowiem czerwona barwa planety kojarzyła się Rzymianom z bogiem wojny o tym imieniu. Nie da się wskazać odkrywcy Marsa. </p>
+    <p>Wiadomo, iż egipscy astronomowie obserwowali go w drugim tysiącleciu przed naszą erą, natomiast źródła chińskie wskazują, że tamtejsi astronomowie znali planetę w IV wieku p.n.e. albo jeszcze wcześniej. Natomiast za pierwszą osobę, która spojrzała na tę planetę przez teleskop, uznawany jest Galileusz – dokonał tego w 1610 roku. </p>
+    <p>Dzisiaj każdy ma szanse spojrzeć na Marsa przez lepsze teleskopy niż dysponował włoski naukowiec (chociażby podczas pokazów nieba w trakcie pikników astronomicznych), w internecie możemy znaleźć dokładne fotografie z wielkich teleskopów, obrazy z sond kosmicznych, czy łazików poruszających się po powierzchni planety.</p>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/mars.jpg" />
+</asp:Content>

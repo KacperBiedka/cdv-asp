@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace ProjektASP
 {
-    public partial class Form : System.Web.UI.Page
+    public partial class Formularz_sieci_Web13 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Label1.Text = "Jakiś tam tekst";
         }
     }
 }
