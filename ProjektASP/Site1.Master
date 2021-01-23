@@ -19,7 +19,7 @@
                     <li><a href="Ziemia.aspx" accesskey="2" title="">Ziemia</a></li>
                     <li><a href="Mars.aspx" accesskey="3" title="">Mars</a></li>
                     <li><a href="Neptun.aspx" accesskey="4" title="">Neptun</a></li>
-                    <li><a href="Login.aspx" accesskey="5" title="">Zaloguj</a></li>
+                    <li><a href="Dashboard.aspx" accesskey="5" title="">Satelity</a></li>
                 </ul>
             </nav>
             <div class="header">

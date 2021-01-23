@@ -55,7 +55,19 @@
 .content h1 {
     background: #1D1D1D;
     color: #fff;
+    width: 56vw;
+    text-align: center;
+    padding: 1% 0;
+}
+
+.content span {
+    background: #eee;
+    font-weight: bold;
+    color: #1d1d1d;
     width: auto;
+    font-size: 150%;
+    display: block;
+    margin: auto;
     text-align: center;
     padding: 1% 0;
 }
@@ -66,4 +78,63 @@
 
 .content img {
     width: 100%;
+}
+
+.loginForm {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.loginForm input {
+    width: 40%;
+    border: solid 1px #ccc;
+    box-shadow: 0px 0px 5px #ddd;
+    background: #fff;
+    outline: none;
+    padding: 10px 5px;
+    margin: 10px;
+}
+
+.loginForm label {
+    width: 100%;
+    text-align: center;
+}
+
+.loginForm input[type=submit] {
+    width: 25%;
+    background: #1D1D1D;
+    color: #fff;
+}
+
+table a {
+    color: black;
+}
+
+.tableWrapper {
+    width: 55vw;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+}
+
+
+.addButton {
+    width: 55vw;
+    display: block;
+    text-align: center;
+}
+
+.addButton a {
+    text-decoration: none;
+    border: solid 1px #1d1d1d;
+    box-shadow: 0 0 5px #ddd;
+    padding: 5px;
+    margin-bottom: 50px;
+    margin: auto;
 }

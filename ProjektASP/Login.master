@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="ProjektASP.Login1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="loginForm">
+       <asp:TextBox runat="server" ID="txtUserId" placeholder="Login" />
+       <br />
+       <asp:TextBox runat="server" ID="txtPassword" placeholder="Hasło" TextMode="Password" />
+       <br />
+       <asp:Button runat="server" ID="btnLogin" Text="zaloguj" OnClick="btnLogin_Click"/>
+       <br />
+       <asp:Label runat="server" ID="txtInfo" />  
+    </div>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+</asp:Content>

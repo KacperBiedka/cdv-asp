@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="dashboard.master.cs" Inherits="ProjektASP.dashboard" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div>
+        <asp:Label ID="dbLabel" runat="server" Text="Label"></asp:Label>
+        <h1>Baza Danych Sztucznych Satelitów</h1>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <div class="tableWrapper">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" style="margin-top: 1px" Width="100%" Height="345px">
+        <Columns>
+            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+            <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
+            <asp:BoundField DataField="nazwa" HeaderText="nazwa" SortExpression="nazwa" />
+            <asp:BoundField DataField="państwo" HeaderText="państwo" SortExpression="państwo" />
+            <asp:BoundField DataField="rozmiar" HeaderText="rozmiar" SortExpression="rozmiar" />
+            <asp:BoundField DataField="kolor" HeaderText="kolor" SortExpression="kolor" />
+        </Columns>
+        </asp:GridView>
+        </div>
+        <h1>Dodaj nowy element</h1>
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="Id" DataSourceID="SqlDataSource1">
+            <InsertItemTemplate>
+                Id:
+                <asp:TextBox ID="IdTextBox" runat="server" Text='<%# Bind("Id") %>' />
+                <br />
+                nazwa:
+                <asp:TextBox ID="nazwaTextBox" runat="server" Text='<%# Bind("nazwa") %>' />
+                <br />
+                państwo:
+                <asp:TextBox ID="państwoTextBox" runat="server" Text='<%# Bind("państwo") %>' />
+                <br />
+                rozmiar:
+                <asp:TextBox ID="rozmiarTextBox" runat="server" Text='<%# Bind("rozmiar") %>' />
+                <br />
+                kolor:
+                <asp:TextBox ID="kolorTextBox" runat="server" Text='<%# Bind("kolor") %>' />
+                <br />
+                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Wstaw" />
+                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Anuluj" />
+            </InsertItemTemplate>
+            <ItemTemplate>
+                <div class="addButton">
+                   &nbsp;<asp:LinkButton  ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="Dodaj Nowy Element" />
+                </div>
+            </ItemTemplate>
+        </asp:FormView>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:users %>" DeleteCommand="DELETE FROM [satelity] WHERE [Id] = @original_Id AND (([nazwa] = @original_nazwa) OR ([nazwa] IS NULL AND @original_nazwa IS NULL)) AND (([państwo] = @original_państwo) OR ([państwo] IS NULL AND @original_państwo IS NULL)) AND (([rozmiar] = @original_rozmiar) OR ([rozmiar] IS NULL AND @original_rozmiar IS NULL)) AND (([kolor] = @original_kolor) OR ([kolor] IS NULL AND @original_kolor IS NULL))" InsertCommand="INSERT INTO [satelity] ([Id], [nazwa], [państwo], [rozmiar], [kolor]) VALUES (@Id, @nazwa, @państwo, @rozmiar, @kolor)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [satelity]" UpdateCommand="UPDATE [satelity] SET [nazwa] = @nazwa, [państwo] = @państwo, [rozmiar] = @rozmiar, [kolor] = @kolor WHERE [Id] = @original_Id AND (([nazwa] = @original_nazwa) OR ([nazwa] IS NULL AND @original_nazwa IS NULL)) AND (([państwo] = @original_państwo) OR ([państwo] IS NULL AND @original_państwo IS NULL)) AND (([rozmiar] = @original_rozmiar) OR ([rozmiar] IS NULL AND @original_rozmiar IS NULL)) AND (([kolor] = @original_kolor) OR ([kolor] IS NULL AND @original_kolor IS NULL))">
+        <DeleteParameters>
+            <asp:Parameter Name="original_Id" Type="Int32" />
+            <asp:Parameter Name="original_nazwa" Type="String" />
+            <asp:Parameter Name="original_państwo" Type="String" />
+            <asp:Parameter Name="original_rozmiar" Type="String" />
+            <asp:Parameter Name="original_kolor" Type="String" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="Id" Type="Int32" />
+            <asp:Parameter Name="nazwa" Type="String" />
+            <asp:Parameter Name="państwo" Type="String" />
+            <asp:Parameter Name="rozmiar" Type="String" />
+            <asp:Parameter Name="kolor" Type="String" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="nazwa" Type="String" />
+            <asp:Parameter Name="państwo" Type="String" />
+            <asp:Parameter Name="rozmiar" Type="String" />
+            <asp:Parameter Name="kolor" Type="String" />
+            <asp:Parameter Name="original_Id" Type="Int32" />
+            <asp:Parameter Name="original_nazwa" Type="String" />
+            <asp:Parameter Name="original_państwo" Type="String" />
+            <asp:Parameter Name="original_rozmiar" Type="String" />
+            <asp:Parameter Name="original_kolor" Type="String" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
+</asp:Content>
